@@ -30,7 +30,7 @@ const Employees = () => {
   return (
     <div className="employee-main">
       <h2 className="employee_heading">Employees Details</h2>
-      <Link to="/addProduct">
+      <Link to="/crud_opration/addProduct">
         <button className="add-button">Add Employee </button>
       </Link>
       <div className="employee-wrapper">
@@ -58,7 +58,7 @@ const Employees = () => {
                         // to="/updateEmployee"
                         // path="/:id"
                         // params={{ id: item.id }}
-                        to={`/updateEmployee/${item.id}`}
+                        to={`/crud_opration/updateEmployee/${item.id}`}
                       >
                         <button className="update-button">update</button>
                       </Link>

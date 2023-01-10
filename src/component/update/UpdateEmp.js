@@ -52,7 +52,7 @@ const UpdateEmp = () => {
   return (
     <div className="updateProduct-main">
       <h2>Add Employee</h2>
-      <Link to="/">
+      <Link to="/crud_opration">
         <button className="update-home-button">Home </button>
       </Link>
       <div className="updateProduct-wrapper">
