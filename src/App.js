@@ -14,7 +14,7 @@ function App() {
           <Route path="/addProduct" element={<AddProduct />} />
           <Route path="/updateEmployee/:id" element={<UpdateEmp />} />
           {/*  <Route path="contact" element={<Contact />} /> */}
-          <Route path="*" element="No page" />
+          <Route path="*" element="No page found" />
         </Routes>
       </BrowserRouter>
     </div>
