@@ -1,0 +1,18 @@
+.AddProduct-main {
+  border: 2px solid rgb(22, 21, 21);
+  margin: 2%;
+  padding: 2%;
+}
+
+.home-button {
+  border: none;
+  background-color: green;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 4%;
+  margin-left: 92%;
+  color: white;
+  cursor: pointer;
+  margin-top: -5%;
+  margin-bottom: -5%;
+}
