@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/crud_opration/" element={<Employees />}></Route>
+          <Route path="/crud_opration" element={<Employees />}></Route>
           <Route path="/crud_opration/addProduct" element={<AddProduct />} />
           <Route
             path="/crud_opration/updateEmployee/:id"
