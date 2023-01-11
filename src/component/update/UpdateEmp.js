@@ -103,7 +103,7 @@ const UpdateEmp = () => {
             </select>
           </div>
           <button type="submit" className="btn btn-primary">
-            Add Product
+            Update EmpInfo
           </button>
         </form>
       </div>

@@ -31,7 +31,7 @@ const Employees = () => {
     <div className="employee-main">
       <h2 className="employee_heading">Employees Details</h2>
       <Link to="/crud-operation/addProduct">
-        <button className="add-button">Add Employee </button>
+        <button className="add-button">Add New Employee </button>
       </Link>
       <div className="employee-wrapper">
         <table className="table">
