@@ -52,7 +52,7 @@ const UpdateEmp = () => {
   return (
     <div className="updateProduct-main">
       <h2>Add Employee</h2>
-      <Link to="/crud_opration">
+      <Link to="/crud-operation">
         <button className="update-home-button">Home </button>
       </Link>
       <div className="updateProduct-wrapper">
@@ -65,7 +65,6 @@ const UpdateEmp = () => {
               id="exampleInputEmail1"
               placeholder="Enter Employee name"
               name="name"
-              //   onChange={(e) => setName(e.target.value)}
               onChange={handle}
               value={empData.name}
             />
@@ -78,7 +77,6 @@ const UpdateEmp = () => {
               id="exampleInputEmail1"
               placeholder="Enter Employee name"
               name="price"
-              //   onChange={(e) => setPrice(e.target.value)}
               onChange={handle}
               value={empData.price}
             />
@@ -89,7 +87,6 @@ const UpdateEmp = () => {
               className="form-control"
               id="exampleFormControlSelect1"
               name="quantity"
-              //   onChange={(e) => setQuantity(e.target.value)}
               onChange={handle}
               value={empData.quantity}
             >

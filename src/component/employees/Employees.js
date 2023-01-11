@@ -30,7 +30,7 @@ const Employees = () => {
   return (
     <div className="employee-main">
       <h2 className="employee_heading">Employees Details</h2>
-      <Link to="/crud_opration/addProduct">
+      <Link to="/crud-operation/addProduct">
         <button className="add-button">Add Employee </button>
       </Link>
       <div className="employee-wrapper">
@@ -54,12 +54,7 @@ const Employees = () => {
                     <td>{item.quantity}</td>
                     <td>{item.price}</td>
                     <td>
-                      <Link
-                        // to="/updateEmployee"
-                        // path="/:id"
-                        // params={{ id: item.id }}
-                        to={`/crud_opration/updateEmployee/${item.id}`}
-                      >
+                      <Link to={`/crud-operation/updateEmployee/${item.id}`}>
                         <button className="update-button">update</button>
                       </Link>
                       <button

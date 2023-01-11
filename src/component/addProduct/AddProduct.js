@@ -32,7 +32,7 @@ const AddProduct = () => {
 
   return (
     <div className="AddProduct-main">
-      <Link to="/crud_opration/">
+      <Link to="/crud-operation">
         <button className="home-button">Home</button>
       </Link>
       <h2>Add Employee</h2>

@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/crud_opration/" element={<Employees />}></Route>
-          <Route path="/crud_opration/addProduct" element={<AddProduct />} />
+          <Route path="/crud-operation" element={<Employees />}></Route>
+          <Route path="/crud-operation/addProduct" element={<AddProduct />} />
           <Route
-            path="/crud_opration/updateEmployee/:id"
+            path="/crud-operation/updateEmployee/:id"
             element={<UpdateEmp />}
           />
           {/*  <Route path="contact" element={<Contact />} /> */}
