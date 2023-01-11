@@ -87,7 +87,7 @@ const AddProduct = () => {
             </select>
           </div>
           <button type="submit" className="btn btn-primary">
-            Update EmpInfo
+            Add EmpInfo
           </button>
         </form>
       </div>
