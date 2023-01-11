@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./AddProduct.css";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 const AddProduct = () => {
   const [name, setName] = useState("");
@@ -26,7 +27,14 @@ const AddProduct = () => {
       },
       body: JSON.stringify(data),
     })
-      .then((res) => console.log(res, "res"))
+      .then((res) => {
+        console.log(res, "res");
+        swal({
+          title: "Employee Added successfully",
+          text: "You clicked the button!",
+          icon: "success",
+        });
+      })
       .catch((e) => console.log("e", e));
   };
 
@@ -48,6 +56,7 @@ const AddProduct = () => {
               name="name"
               onChange={(e) => setName(e.target.value)}
               value={name}
+              required
             />
           </div>
           <div className="form-group">
@@ -60,6 +69,7 @@ const AddProduct = () => {
               name="price"
               onChange={(e) => setPrice(e.target.value)}
               value={price}
+              required
             />
           </div>
           <div className="form-group">
@@ -70,6 +80,7 @@ const AddProduct = () => {
               name="quantity"
               onChange={(e) => setQuantity(e.target.value)}
               value={quantity}
+              required
             >
               <option>0</option>
               <option>1</option>

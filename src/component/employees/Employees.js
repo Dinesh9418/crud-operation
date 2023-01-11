@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Employees.css";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 const Employees = () => {
   const [empData, setEmpData] = useState();
@@ -23,6 +24,18 @@ const Employees = () => {
       method: "DELETE",
     }).then(() => {
       console.log("Delete successful");
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this employee !",
+        icon: "warning",
+        dangerMode: true,
+      }).then((willDelete) => {
+        if (willDelete) {
+          swal("Poof! Your employee data has been deleted!", {
+            icon: "success",
+          });
+        }
+      });
       getAllProduct();
     });
   };

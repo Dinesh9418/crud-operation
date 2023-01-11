@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./UpdateEmp.css";
+import swal from "sweetalert";
 import { Link, useParams } from "react-router-dom";
 
 const UpdateEmp = () => {
@@ -28,7 +29,6 @@ const UpdateEmp = () => {
   const postEvent = (e) => {
     // console.log("empData", name, price, quantity);
     e.preventDefault();
-    window.location.reload(false);
     const bodyData = {
       id: params.id,
       name: empData.name,
@@ -45,8 +45,16 @@ const UpdateEmp = () => {
       },
       body: JSON.stringify(bodyData),
     })
-      .then((res) => console.log(res, "res"))
+      .then((res) => {
+        console.log(res, "res");
+        swal({
+          title: "Employee Added successfully",
+          text: "You clicked the button!",
+          icon: "success",
+        });
+      })
       .catch((e) => console.log("e", e));
+    window.location.reload(false);
   };
 
   return (
