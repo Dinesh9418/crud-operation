@@ -22,6 +22,7 @@ const Employees = () => {
     console.log("key", key);
     fetch(`http://localhost:9191/delete/${key}`, {
       method: "DELETE",
+      // "Access-Control-Allow-Origin": "*",
     }).then(() => {
       console.log("Delete successful");
       swal({
@@ -43,10 +44,10 @@ const Employees = () => {
   return (
     <div className="employee-main">
       <h2 className="employee_heading">Employees Details</h2>
-      <Link to="/crud-operation/addProduct">
-        <button className="add-button">Add New Employee </button>
-      </Link>
       <div className="employee-wrapper">
+        <Link to="/crud-operation/addProduct">
+          <button className="add-button">Add New Employee </button>
+        </Link>
         <table className="table">
           <thead>
             <tr>

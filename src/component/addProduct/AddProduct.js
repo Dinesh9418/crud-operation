@@ -40,11 +40,11 @@ const AddProduct = () => {
 
   return (
     <div className="AddProduct-main">
-      <Link to="/crud-operation">
-        <button className="home-button">Home</button>
-      </Link>
       <h2>Add Employee</h2>
       <div className="addProduct-wrapper">
+        <Link to="/crud-operation">
+          <button className="home-button">Home</button>
+        </Link>
         <form onSubmit={postEvent}>
           <div class="form-group">
             <label for="exampleInputEmail1">Employee Name</label>

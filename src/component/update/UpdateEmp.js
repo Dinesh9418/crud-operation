@@ -16,16 +16,6 @@ const UpdateEmp = () => {
     });
   }
 
-  function getAllProductById() {
-    fetch(`http://localhost:9191/findProductBy/${params.id}`)
-      .then((response) => response.json())
-      .then((data) => setEmpData(data));
-  }
-
-  useEffect(() => {
-    getAllProductById();
-  }, []);
-
   const postEvent = (e) => {
     // console.log("empData", name, price, quantity);
     e.preventDefault();
@@ -56,6 +46,16 @@ const UpdateEmp = () => {
       .catch((e) => console.log("e", e));
     window.location.reload(false);
   };
+
+  function getUpdatedProductById() {
+    fetch(`http://localhost:9191/findProductBy/${params.id}`)
+      .then((response) => response.json())
+      .then((data) => setEmpData(data));
+  }
+
+  useEffect(() => {
+    getUpdatedProductById();
+  }, [params.id]);
 
   return (
     <div className="updateProduct-main">
